@@ -2,7 +2,7 @@ const connectToMongo = require('./db.js');
 connectToMongo();
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 5000
 
 // respond with "hello world" when a GET request is made to the homepage
 // app.get('/', (req, res) => {
