@@ -11,7 +11,7 @@ router.get("/fetchallnotes", fetchuser, async (req, res) => {
     res.json(notes);
   } catch (error) {
     console.log(error);
-    res.send(500).send({ error: "Some error Occured" });
+    res.status(500).send({ error: "Some error Occured" });
   }
 });
 //ROUTE 2 Add a new note using   POST : /api/notes/addnote   Login Required
@@ -43,7 +43,7 @@ router.post(
       res.json(saveNote);
     } catch (error) {
       console.log(error);
-      res.send(500).send({ error: "Some error Occured" });
+      res.status(500).send({ error: "Some error Occured" });
     }
   }
 );
@@ -89,7 +89,7 @@ router.put("/updatenote/:id", fetchuser, async (req, res) => {
     res.json(note);
   } catch (error) {
     console.log(error);
-    res.send(500).send({ error: "Some error Occured" });
+    res.status(500).send({ error: "Some error Occured" });
   }
 });
 
@@ -112,7 +112,7 @@ router.delete("/deletenote/:id", fetchuser, async (req, res) => {
     res.json({ Success: "Note has been deleted", note: note });
   } catch (error) {
     console.log(error);
-    res.send(500).send({ error: "Some error Occured" });
+    res.status(500).send({ error: "Some error Occured" });
   }
 });
 
